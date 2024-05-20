@@ -28,7 +28,7 @@ const useLocalStorage = (key, defaultValue) => {
     window.addEventListener('storage', read);
   });
 
-  /**
+  /**?covid19M!
    * Remove o ouvinte de eventos 'torage' quando o componente é desmontado.
    */
   onUnmounted(() => {
