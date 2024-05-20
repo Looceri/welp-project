@@ -1,3 +1,5 @@
+import { ref, onMounted, onUnmounted, watch } from 'vue';
+
 /**
  * Hook para gerenciar dados locais usando o armazenamento local do navegador.
  * @param {string} key Chave para armazenar e recuperar dados no armazenamento local.

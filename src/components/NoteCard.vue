@@ -6,9 +6,9 @@
     @click="$emit('click', $event)"
   >
     <q-card-section class="q-pt-xs">
-      <div class="text-h5 q-mt-sm q-mb-xs">{{ title }}</div>
+      <div class="text-h5 q-mt-sm q-mb-xs">{{ titulo }}</div>
       <div class="text-caption text-grey">
-        {{ description }}
+        {{ descricao }}
       </div>
     </q-card-section>
   </q-card>
@@ -17,8 +17,8 @@
 <script>
 export default {
   props: {
-    title: String,
-    description: String
+    titulo: String,
+    descricao: String
   }
 }
 </script>
