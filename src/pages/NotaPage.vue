@@ -1,13 +1,13 @@
 <script>
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useLocalNotes } from 'src/router/helper'
+import { usarNotasLocais } from 'src/router/helper'
 import ContainerLink from 'src/components/ContainerLink.vue'
 
 export default {
   components: { ContainerLink },
   setup() {
-    const notas = useLocalNotes()
+    const notas = usarNotasLocais()
     const route = useRoute()
     const notaId = computed(() => parseInt(route.params.id))
     const nota = computed(() => notas.value[notaId.value])
@@ -44,7 +44,7 @@ export default {
           </q-card>
 
           <div class="q-mt-md">
-            <q-btn class="q-ml-sm" color="positive" type="submit"> Done </q-btn>
+          <q-btn class="q-ml-sm" color="positive" type="submit"> Feito </q-btn>
           </div>
         </form>
       </div>
@@ -55,6 +55,7 @@ export default {
           <div>
             <q-btn
               round
+              class="q-ml-sm"
               color="secondary"
               icon="edit"
               @click="editing = true"
@@ -70,7 +71,11 @@ export default {
         </div>
         <div>{{ nota.descricao }}</div>
         <div class="q-mt-md" v-html="nota.conteudo" />
+        <div class="q-mt-md">
+          <q-btn color="grey" to="/" type="reset">Pagina Inicial</q-btn>
+        </div>
       </div>
+
     </ContainerLink>
   </q-page>
 </template>
