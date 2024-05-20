@@ -3,7 +3,6 @@
 
     <q-header reveal elevated class="bg-primary text-white bg-green">
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
           <q-avatar>
@@ -12,17 +11,9 @@
           Welp
         </q-toolbar-title>
 
-        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" overlay bordered>
-      <!-- drawer content -->
-    </q-drawer>
-
-    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" elevated>
-      <!-- drawer content -->
-    </q-drawer>
 
     <q-page-container>
       <router-view />
